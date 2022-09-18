@@ -76,6 +76,7 @@ Materials
 # print(bool(1))
 # print(bool(0))
 # print(bool(''))
+# print(bool(None))
 
 # False objects are
 # 1. constants: None, False
@@ -84,7 +85,14 @@ Materials
 
 #####################
 # Boolean operations
-# and, or, not
+
+# print(a_bool and b_bool)
+# print(a_bool or b_bool)
+# print(not b_bool)
+
+# print(any((False, True, False, False)))
+# print(all((False, True, False, False)))
+# # and, or, not
 # any()
 # all()
 
@@ -108,11 +116,15 @@ Materials
 
 # id() function
 # difference between being identical and being equal
-# print(2 == (4-2))
-# print(2 is (4-2))
 
-# print(2 == (4.-2))
-# print(2 is (4.-2))
+print(2 == (4-2))
+print(2 is (4-2))
+
+print(type(4-2))
+print(type(4.-2))
+
+print(2 == (4.-2))
+print(2 is (4.-2))
 
 # Bitwise operations
 # As we know computers work bitwise and all operations are eventually divided to bitwise operations

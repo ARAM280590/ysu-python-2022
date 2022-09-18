@@ -35,9 +35,7 @@ Materials
     - https://i.stack.imgur.com/GemQf.png 
 
 """
-from typing import Sized, Hashable
 
-object
 ###########################################
 # 1. overview of methods and attributes
 ###########################################
@@ -61,7 +59,10 @@ object
 # # dir and doc functions
 # # dir (or __dir__() method) function returns a list of all methods and attributes of the class instance
 # # __doc__ attribute is a multiline string describing the class
-#
+
+# print(1 + 2)
+# print((1).__add__(2))
+
 # int_met_att = dir(new_integer)
 # print(int_met_att)
 #
@@ -78,27 +79,28 @@ object
 # sequences: list, tuple, string
 
 # ranks = ("2","3","4","5","6","7","8","9","10","jack", "queen", "king", "ace",)
-#
+
 # suits = (
 #     "spades",
 #     "hearts",
 #     "diamonds",
 #     "spades"
 # )
-#
+
 # # sequence operations
 #
 # print("K" in ranks)
 # print("ace" not in ranks)
-# print([1,2,3] + [[4],5,6])
-# print([1,2,3] * 3)
-#
+
 # # # member accessing, slicing
 # print(ranks)
 # print(ranks[0])
 # print(ranks[-1])
 # print(ranks[0:2])
 # print(ranks[2:])
+
+# # ranks[start:end:step]
+# print(ranks[:])
 # print(ranks[::2])
 # print(ranks[::-1])
 # #
@@ -108,54 +110,74 @@ object
 #
 # # list operations
 #
-# list_example = [1,2,3]
+
+# # accessor
+# print((1).__add__(2))
+
+list_example = [1,2,3] # MUTABLE
+#
 #
 # # mutator method
-# list_example.append("a")
-# list_example.append((1,2,3))
-# list_example.extend((1,2,3))
+# print(list_example.append("a"))
 # print(list_example)
-#
-#
-# # sets
+
+# print(dir(list_example))
+# print(list_example.__dir__())
+
+# list_example.append((1,2,3))
+# list_example.extend((1,2,[4,5,6]))
+# print(list_example)
+# #
+# print([1,2,3] + [[4],5,6])
+# print([1,2,3] * 3)
+# #
+# sets
 # set_example = {
 #     "banana",
 #     "apple",
 #     "orange"
 # }
+# # hashing, hash value
+
+# print(set_example)
 # #
 # set_example.add("pineapple")
-#
-# # mapping: dictionaries
-#
+
+# print(set_example)
+
+
+# a_string = "abcd" # sequence, immutable
+
+# mapping: dictionaries
+
 # bl_values = {
 #     "king": (10,10),
-#     "ace": (1,11)
+#     "ace": (1,11),
 #     "1": (1,1)
 # }
-#
-# bl_values['king']
+
+# print(bl_values['king'])
 
 ####################
 # # 3. Control-flows
 ####################
-# a = 0
+# a = (input("Enter an integer: "))
 # if a == 1:
 #     print("odd")
 # elif a == 2:
-#     print("odd")
+#     print("even")
 # else:
 #     pass
 #
-# for i in [1, 2, 3, 4, 5]:
-#     if i == 2:
-#         continue
-#     print(i)
-#     if i == 4:
-#         break
-# else:
-#     print("_______________")
-#
+for i in [1, 2, 3, 4, 5]:
+    if i == 2:
+        continue
+    print(i)
+    if i == 4:
+        break
+
+
+
 ###############################
 # 4. math and random modules
 ###############################
