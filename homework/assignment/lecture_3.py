@@ -47,17 +47,17 @@ Fill your from next line after # Answer:
 
 ###################
 ###################
-# Task 9: Create a 3X3 identity matrix using tuples
+# Task 9: Create a 3X3 identity matrix using lists
 # Answer:
 
 ###################
 ###################
-# Task 10: Write a program to check if gives matrix is an identity matrix
+# Task 10: Write a program to check if a given square matrix is an identity matrix
 # Answer:
 
 ###################
 ###################
-# Task 11: Write a program to return a tuple with square root of the numbers in tuple
+# Task 11: Write a program to return a list with square roots of the numbers in list
 # Answer:
 
 ###################
