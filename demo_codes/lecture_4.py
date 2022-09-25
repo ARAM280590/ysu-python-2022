@@ -7,7 +7,7 @@ At this lecture we cover
 
 Materials
     - https://docs.python.org/3/tutorial/controlflow.html#defining-functions
-    - Michael T. Goodrich, Data Structures and Algorithms in Python - Chapter 1.5
+    - Michael T. Goodrich, Data Structures and Algorithms in Python - Chapter 1.1-1.5(included), 1.9
 
     also:
     - https://i.redd.it/8341g68g1v7y.png
@@ -26,7 +26,7 @@ Materials
 # # use pass keyword as the function does nothing
 # # use () to call a function
 # # parameter vs argument
-#
+
 # def nothing():
 #     pass
 #
@@ -34,12 +34,15 @@ Materials
 # print(nothing)
 # print(type(nothing))
 # nothing()
-#
+
 #
 # def sqr(x):
+#     x1 = 3
+#     x += x1  # identical to x = x+x1
+#     print(f"Calling sqr function for {x}")
 #     return x**2
 #
-#
+# #
 # a = sqr(4)
 # print(a+1)
 #
@@ -51,22 +54,25 @@ Materials
 # # you can return multiple arguments with different options
 # def degree_2_3(x):
 #     return x ** 2, x ** 3
-#
-#
+# #
+# #
 # print(degree_2_3(x=4))
+# #
+# l = degree_2_3(x=4)
+# print(l)
 #
 # a, b = degree_2_3(x=4)
 # print(a, b)
-#
-# a = degree_2_3(x=4)
-# print(a)
-#
+# #
+# # a = degree_2_3(x=4)
+# # print(a)
+# #
 # _, b = degree_2_3(x=4)
 # print(b)
 #########################################################
 
 
-# # print first n fibonacci numbers and write a docstring
+# print first n fibonacci numbers and write a docstring
 # def fib(n):
 #     """
 # this function return the first n fibonacci numbers
@@ -87,7 +93,7 @@ Materials
 #         elif n == 2:
 #             return first_n_fib
 #
-#         for i in range(n - 2):
+#         for i in range(n-2):
 #             a, b = b, a + b
 #             first_n_fib.append(b)
 #
@@ -105,40 +111,43 @@ Materials
 # print(fib(n='a'))
 # print(fib(n=1))
 # print(fib(n=10))
-
+#
 # print(fib.__doc__)
 # print(dir(fib))
 ###########################################
 
-# # default, keyword and positional arguments
-#
-# def alarm(text = "alarm message"):
+# default, keyword and positional arguments
+
+# def alarm(f, a, text = "alarm message"):
 # 	print(text)
+#     print(f)
 #
-# alarm()
-# alarm(text = "new alarm message")
-# alarm("another alarm message")
-#
-#
+# # alarm()
+# alarm('d', text = "new alarm message")
+# alarm('d', "another alarm message")
+
+
 # def sum3(a,b,c):
 # 	print(a*b+c)
 #
 # sum3(a=10,c=20,b=30)
+# sum3(10,20,30)
+
 
 # to keep in mind, all variables inside the function are local variables
 # that is they are all created and used only within function block
 
 # # immutable type example
 # c = 4
-#
+# #
 # def foo(x = c):
 # 	print(x)
 # 	print(c)
-#
+# #
 # c = 5
 # foo()
-#
-# # mutable type example
+# #
+# # # mutable type example
 # c = [1,2,3,4]
 #
 # def foo(x = c):
@@ -170,7 +179,7 @@ Materials
 # 	print(amounts)
 #
 # foo(4, 'egg', 'cheese', 'jam','bacon', egg = 10, cheese = 8, bacon = 6)
-
+#
 # # functions are objects
 # print(foo)
 
