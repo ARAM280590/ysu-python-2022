@@ -35,14 +35,18 @@ def text_to_sentences(text: str) -> list:
 ###################
 # Task 5: Write a function to print total number of goods in basket and total cost of the goods in basket where basket
 # is given as a keyword arbitrary parameter
+# EXAMPLE: basket_aggregator(book = 7.1, apple = 1.5) -> (2, 8.6)
 # Answer:
 def basket_aggregator():
     pass
 
 ###################
 ###################
-# Task 6: a, b, c are the height of a triangle, ab, ac, bc are the angles, h is the height, s is the area. Any of them are given as a keyword
-# arbitrary parameter. Find all parameters that is not given and are possible to find.
+# Task 6: a, b, c are the sides of a triangle, ab, ac, bc are the angles in degrees, h_a, h_b, h_c are the heights, s is the area.
+# Any of them are given as a keyword arbitrary parameter.
+# Find all parameters that is not given and are possible to find.
+# EXAMPLE: tringle_solver(a=2, b=2, c=2) -> {'ac':60, 'bc':60, 'ab':60, 'h_a':1.732, 'h_b':1.732, 'h_c':1.732, 's'=1.732}
+# EXAMPLE: tringle_solver(a=2, ac=60, c=8) -> {'ab':90, 'bc':30, 'b':6.93, 'h_a':6.93, 'h_b':4, 'h_c': 6.93, 's'=1.732}
 # Answer:
 def triangle_solver():
     pass
