@@ -21,9 +21,9 @@ At this lecture we cover
 Materials
     - Michael T. Goodrich, Data Structures and Algorithms in Python - Chapter 2
     - Python Programming: An Introduction to Computer Science - Chapter 10.1-5
-    - Dusty Phillips, Python 3 Object-oriented Programming
 
     also:
+    - Dusty Phillips, Python 3 Object-oriented Programming
     - MRO: https://www.geeksforgeeks.org/multiple-inheritance-in-python/
     - meta-classes: https://realpython.com/python-metaclasses/
     - ABC: https://docs.python.org/3/library/abc.html (not to be mixed with collections.abc)
@@ -63,45 +63,51 @@ Materials
 #
 #     def __init__(self, name, login, university, profile_pic=None):
 #         self.name = name
-#         self.__login = login
-#         self.university = university
-#         self._profile_pic = profile_pic
+#         self.__login = login # protected
+#         self.university = university # public
+#         self._profile_pic = profile_pic # private
 #
 #     def __repr__(self):
 #         return f"This is {self.name} from {self.university}, find him/her @ {self.__login}"
-#
-#     # property controls the behavior of
-#     # 1.getting the attribute that is how <object.attribute> is accessed
-#     # 2.setting a new value to the attribute - <object.attribute = new_value>
-#     # 3.deleting the attribute - def object.attribute
-#     #
-#     @property  # getter
-#     def profile_pic(self): return self._profile_pic
-#
-#     @profile_pic.setter  # setter
-#     def profile_pic(self, photo_url):
-#         self._profile_pic = photo_url
-#
-#     @profile_pic.deleter  # deleter
-#     def profile_pic(self):
-#         del self._profile_pic
-#
-#     # # other syntax
-#     # def get_profile_pic(self):
-#     #     return self._profile_pic
-#     #
-#     # def set_profile_pic(self, photo_url):
-#     #     self._profile_pic = photo_url
-#     #
-#     # def del_profile_pic(self):
-#     #     del self._profile_pic
-#     #
-#     # profile_pic = property(get_profile_pic, set_profile_pic, del_profile_pic, "profile pic property")
-#
-#
-# # __repr__() method
+
+    # property controls the behavior of
+    # 1.getting the attribute that is how <object.attribute> is accessed
+    # 2.setting a new value to the attribute - <object.attribute = new_value>
+    # 3.deleting the attribute - def object.attribute
+    #
+    # @property  # getter
+    # def profile_pic(self): return self._profile_pic
+    #
+    # @profile_pic.setter  # setter
+    # def profile_pic(self, photo_url):
+    #     self._profile_pic = photo_url
+    #
+    # @profile_pic.deleter  # deleter
+    # def profile_pic(self):
+    #     del self._profile_pic
+
+    # # other syntax
+    # def get_profile_pic(self):
+    #     return self._profile_pic
+    #
+    # def set_profile_pic(self, photo_url):
+    #     self._profile_pic = photo_url
+    #
+    # def del_profile_pic(self):
+    #     del self._profile_pic
+    #
+    # profile_pic = property(get_profile_pic, set_profile_pic, del_profile_pic, "profile pic property")
+
+
+# __repr__() method
 # a_user = User("Gevorg Ghalachyan", "ggh96", "YSU")
+#
 # print(a_user)
+#
+# a_user.profile_pic = 'a'
+# print(a_user.profile_pic)
+# a_user._User__login = "a"
+
 #
 # # 2. Encapsulation
 # # Encapsulation is a mechanism to wrap up fields and methods together as a single unit.
@@ -195,4 +201,11 @@ Materials
 # inst_F4_2 = F4_2()
 # print(F4_2.__mro__)
 # inst_F4_2.m()
+
+
+##############################################
+
+# from math import cos, pi
+#
+# print(cos.__doc__)
 

@@ -1,5 +1,5 @@
 """
-This module is a demo code for lecture 2
+This module is a demo code for lecture 5
 
 At this lecture we cover
     - classes
@@ -174,46 +174,57 @@ Materials
 #
 # 8. class methods
 # self keyword is a reference to instance attributes
-# cls keyword is a reference to class attributes
+# # cls keyword is a reference to class attributes
+#
+# class Student:
+#     number_of_students = 0
+#
+#     def __init__(self, name, university):
+#         self.name = name
+#         self.university = university
+#         Student.add_student()
+#
+#     @classmethod
+#     def add_student(cls):
+#         cls.number_of_students += 1
 
-class Student:
-    number_of_students = 0
-
-    def __init__(self, name, university):
-        self.name = name
-        self.university = university
-        Student.add_student()
-
-    @classmethod
-    def add_student(cls):
-        cls.number_of_students += 1
-
-
-print(f"Current number of students: {Student.number_of_students}")
-print(f"Current number of students: {Student.number_of_students}")
-st1 = Student("Al", "TUM")
-print(f"Current number of students: {Student.number_of_students}")
-print(f"Current number of students: {st1.number_of_students}")
-st2 = Student("Berg", "EPFL")
-Student("a", 5)
-print(f"Current number of students: {Student.number_of_students}")
-print(f"Current number of students: {st1.number_of_students}")
-print(f"Current number of students: {st2.number_of_students}")
+#
+# print(f"Current number of students: {Student.number_of_students}")
+# print(f"Current number of students: {Student.number_of_students}")
+# st1 = Student("Al", "TUM")
+# print(f"Current number of students: {Student.number_of_students}")
+# print(f"Current number of students: {st1.number_of_students}")
+# st2 = Student("Berg", "EPFL")
+# Student("a", 5)
+# print(f"Current number of students: {Student.number_of_students}")
+# print(f"Current number of students: {st1.number_of_students}")
+# print(f"Current number of students: {st2.number_of_students}")
 
 #
 # # 9.static methods
 # # static methods act like functions
 # # they don't access anything, they don't mutate anything
-# # let's call this module from another script
+# # # let's call this module from another script
+# #
+# class MyFunctions:
 #
-class MyFunctions:
+#     @staticmethod
+#     def upper(x):
+#         if isinstance(x, str):
+#             return x.upper()
+#
+#     @staticmethod
+#     def capitalize(x):
+#         if isinstance(x, str):
+#             return x.capitalize()
 
-    @staticmethod
-    def upper(x):
-        if isinstance(x, str):
-            return x.upper()
+###################################################
 
-    @staticmethod
-    def capitalize(x):
-        if isinstance(x, str):
-            return x.capitalize()
+class Person:
+
+    def __init__(self, name):
+        self.name = name
+
+
+armen = Person(name='Armen')
+print(armen.name)
