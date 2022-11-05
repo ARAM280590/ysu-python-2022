@@ -150,6 +150,7 @@ class Game:
             ask_player = input("Do you want to add a player (y/n):")
             if ask_player == "y":
                 name = input("Please enter the player's name: ")
+                # TODO : check if name is valid
                 self.users.append(Player(name=name))
                 print(f"{name} added!")
                 self.number_of_players += 1
@@ -161,6 +162,7 @@ class Game:
                 Game.add_player(self)
         else:
             print("You reached maximum number of players!")
+
         if self.number_of_players == 1:
             print("No player joined the game")
             quit() # TODO

@@ -9,6 +9,7 @@ At this lecture we cover
 Materials
 
 """
+# lecture_7.py
 # files - text and binary
 # text files: .txt, .csv, .json
 # structured, semi-structured, unstructured
@@ -18,19 +19,20 @@ Materials
 #
 # zen = open("../data/zen_of_python.txt", mode='r')
 # print(zen)
-#
+# #
 # print(zen.__dir__())
-#
+# #
 # for elem in zen:
 #     print(elem)
-#
+# #
 # zen_read = zen.read()
 # print(zen_read)
+# zen.close()
 
 # with open("../data/zen_of_python.txt", mode='r') as file:
 #     for line in file.readlines():
 #         print(line)
-#
+
 #
 # with open("../data/zen_of_python.txt", mode='r') as file_read, open("../data/zen_of_python_EDIT.txt", mode='w') as file_write:
 #     for line_number, line in enumerate(file_read):
@@ -45,31 +47,32 @@ import csv # https://docs.python.org/3/library/csv.html
 #     writer.writerow(['line_number', 'wordcount'])
 #     for line_number, line in enumerate(file_read):
 #         writer.writerow([line_number,len(line.split())])
+#         writer.writerows()
 #
-# # reading a csv file
+# reading a csv file
 # with open("../data/zen_of_python_EDIT.csv", mode='r', newline='') as file_read:
 #     reader = csv.reader(file_read, delimiter=",")
-#     reader.__next__()
+#     # reader.__next__()
 #     for row in reader:
 #         print(row)
 
 # json
 
-# count_ls = []
+# count_ls = [] # list -> array
 # with open("../data/zen_of_python.txt", mode='r') as file_read:
 #     for line_number, line in enumerate(file_read):
 #         count_ls.append({
 #             'line_number': line_number,
 #             'wordcount': len(line.split())
-#         })
+#         }) # dict -> object
 # print(count_ls)
 #
 #
-# import json #
-# json_string = json.dumps(count_ls) # wrtites to a string object
+# import json # https://docs.python.org/3/library/json.html
+# json_string = json.dumps(count_ls) # writes to a string object
 # print(json_string)
 # print(type(json_string))
-#
+# #
 # with open("../data/zen_of_python_EDIT.json", mode='w') as file_write:
 #     json.dump(count_ls, file_write) # writes to a file
 #
@@ -100,15 +103,19 @@ import math
 
 # print(math.sqrt('a'))
 
-# number = 'a'
+# number = -1
 # try:
 #     a = math.sqrt(number)
 # except ValueError as e:
 #     print(f"Invalid value: {e}")
 # except TypeError as e:
 #     print(f"Invalid type: {e}")
+# # except SyntaxError as e: ### ???
+# #     print(f"Invalid syntax: {e}")
 # print('continue program')
 
+# from math import sqrt
+#
 # while True:
 #     try:
 #         x = int(input("Please enter a positive number: "))
