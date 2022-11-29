@@ -30,7 +30,8 @@ Materials
     - UML cheat sheet: https://khalilstemmler.com/files/resources/umlcheatsheet.jpg
     - name mangling: https://stackoverflow.com/questions/1301346/what-is-the-meaning-of-single-and-double-underscore-before-an-object-name
 """
-
+def foo():
+    pass
 
 #
 ##########################################################
@@ -208,4 +209,3 @@ Materials
 # from math import cos, pi
 #
 # print(cos.__doc__)
-
